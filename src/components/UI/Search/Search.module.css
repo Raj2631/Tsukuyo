@@ -1,0 +1,19 @@
+.Search {
+  background-color: #323154;
+  padding: 10px;
+  margin: 10px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  width: 50%;
+}
+
+.Search:focus {
+  outline: none;
+}
+
+@media screen and (min-width: 600px) {
+  .Search {
+    width: 30%;
+  }
+}

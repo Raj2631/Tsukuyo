@@ -1,0 +1,12 @@
+.Toolbar {
+  background-color: #14142c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (min-width: 600px) {
+  .Toolbar {
+    justify-content: center;
+  }
+}
