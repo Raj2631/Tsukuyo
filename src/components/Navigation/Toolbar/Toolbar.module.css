@@ -1,4 +1,5 @@
 .Toolbar {
+  background-color: #14142c;
   height: 60px;
   display: flex;
   justify-content: space-around;

@@ -11,7 +11,7 @@ const Toolbar = (props) => {
       <nav className={classes.DesktopOnly}>
         <NavItems />
       </nav>
-      <h2 className={classes.Title}>The MovieMania</h2>
+      <h2 className={classes.Title}>Tsukuyo</h2>
       <Search />
     </header>
   );
