@@ -7,10 +7,13 @@ class Layout extends Component {
     const style = {
       minHeight: '100vh',
     };
+
     return (
       <div style={style}>
         <Toolbar />
-        <main className={classes.Content}>{this.props.children}</main>
+        <main className={classes.Content}>
+          <section style={{ height: '100vh' }}>{this.props.children}</section>
+        </main>
       </div>
     );
   }
