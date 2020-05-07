@@ -1,6 +1,10 @@
 .Content {
-  max-width: 950px;
+  max-width: 1200px;
   color: white !important;
   margin: 130px auto 0 auto;
   height: 100%;
+}
+
+.Container {
+  margin-bottom: 100px;
 }

@@ -12,7 +12,7 @@ class Layout extends Component {
       <div style={style}>
         <Toolbar />
         <main className={classes.Content}>
-          <section style={{ height: '100vh' }}>{this.props.children}</section>
+          <section className={classes.Container}>{this.props.children}</section>
         </main>
       </div>
     );

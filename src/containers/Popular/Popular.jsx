@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
-import AnimeItems from '../../components/AnimeItems/AnimeItems';
+import AnimeItem from '../../components/AnimeItem/AnimeItem';
+import Spinner from '../../components/UI/Spinner/Spinner';
+import classes from './Popular.module.css';
 
 export default class Popular extends Component {
   state = {
-    movies: [],
+    animes: null,
+    error: false,
   };
 
   async componentDidMount() {
@@ -12,13 +15,30 @@ export default class Popular extends Component {
         'https://api.jikan.moe/v3/top/anime/1/bypopularity'
       );
       const data = await res.json();
-      this.setState({ movies: data.top });
+      console.log(data.top);
+      this.setState({ animes: data.top });
     } catch (e) {
       alert(e);
+      this.setState({ error: true });
     }
   }
 
   render() {
-    return <div></div>;
+    let animeItems;
+    if (this.state.animes) {
+      animeItems = this.state.animes.map((anime) => {
+        return (
+          <AnimeItem
+            key={anime.mal_id}
+            img={anime.image_url}
+            title={anime.title}
+          />
+        );
+      });
+    } else {
+      animeItems = <Spinner />;
+    }
+
+    return <div className={classes.Container}>{animeItems}</div>;
   }
 }

@@ -10,7 +10,8 @@ function App() {
     <div className="App">
       <Layout>
         <Switch>
-          <Route path="/" component={Popular} />
+          <Route path="/top" />
+          <Route exact path="/" component={Popular} />
         </Switch>
       </Layout>
     </div>

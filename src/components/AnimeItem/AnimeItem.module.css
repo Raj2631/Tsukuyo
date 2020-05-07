@@ -1,0 +1,15 @@
+.AnimeItem {
+  height: 300px;
+  cursor: pointer;
+}
+
+.AnimeItem:hover {
+  transform: scale(1.05);
+  transition: 0.2s ease-in;
+}
+
+.AnimeItem img {
+  height: 100%;
+  width: 100%;
+  border-radius: 7px;
+}
