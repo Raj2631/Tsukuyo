@@ -1,12 +1,30 @@
 .Toolbar {
-  background-color: #14142c;
+  height: 60px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
-@media screen and (min-width: 600px) {
+.Title {
+  margin: 0;
+  color: rgba(255, 255, 255);
+}
+
+.DesktopOnly {
+  width: 33.3%;
+}
+
+@media screen and (max-width: 600px) {
   .Toolbar {
-    justify-content: center;
+    justify-content: space-between;
+  }
+
+  .DesktopOnly,
+  .Title {
+    display: none;
   }
 }
